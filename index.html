@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b16">
+  <title>Ivan AI Video Creator Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="logo">IV</span>
+      <span>Ivan AI <small>VIDEO STUDIO</small></span>
+    </a>
+    <span class="status"><i></i> Studio</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">YOUR CREATIVE AI STUDIO</span>
+      <h1>Turn your ideas into <span>videos.</span></h1>
+      <p>Choose a style, add your media, and prepare your next video.</p>
+    </section>
+
+    <section class="panel">
+      <h2>01. Choose a video type</h2>
+      <div class="categories">
+        <button class="category active" data-category="Cinematic">🎬<span>Cinematic</span></button>
+        <button class="category" data-category="Explainer">💡<span>Explainer</span></button>
+        <button class="category" data-category="Anime">✨<span>Anime</span></button>
+        <button class="category" data-category="Product Ad">🛍️<span>Product Ad</span></button>
+        <button class="category" data-category="Social Media">📱<span>Social Media</span></button>
+        <button class="category" data-category="Storytelling">📖<span>Storytelling</span></button>
+      </div>
+
+      <h2>02. Add your media</h2>
+      <label class="upload" for="mediaInput">
+        <span class="upload-icon">＋</span>
+        <strong>Select from your phone</strong>
+        <span>Choose images or videos from your gallery</span>
+        <span class="upload-button">Choose files</span>
+      </label>
+      <input id="mediaInput" type="file" accept="image/*,video/*" multiple hidden>
+      <div id="mediaPreview" class="media-grid"></div>
+
+      <h2>03. Describe your video</h2>
+      <label class="field-label" for="prompt">Your idea</label>
+      <textarea id="prompt" rows="4" placeholder="Example: Create a cinematic sunset scene with smooth camera movement..."></textarea>
+
+      <div class="two-columns">
+        <div>
+          <label class="field-label" for="ratio">Aspect ratio</label>
+          <select id="ratio">
+            <option value="9:16">9:16 — TikTok / Reels</option>
+            <option value="16:9">16:9 — YouTube</option>
+            <option value="1:1">1:1 — Square</option>
+          </select>
+        </div>
+        <div>
+          <label class="field-label" for="duration">Duration</label>
+          <select id="duration">
+            <option value="5">5 seconds</option>
+            <option value="10">10 seconds</option>
+            <option value="15">15 seconds</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generateBtn" class="generate-button">✦ Prepare my video</button>
+      <p class="notice">Preview mode: this demo does not generate an actual AI video yet.</p>
+      <div id="result" class="result" hidden></div>
+    </section>
+
+    <section class="panel history-panel">
+      <h2>Your workspace</h2>
+      <p>Your selected category and media stay available while this page remains open.</p>
+      <div class="workspace-item">
+        <span class="workspace-icon">✦</span>
+        <div><strong>Ivan AI Video Creator Studio</strong><small id="workspaceStatus">Ready to create</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Ivan AI Video Creator Studio</footer>
+  <script src="script.js"></script>
+</body>
+  </html>
+              
